@@ -8,18 +8,18 @@
   :root {
     --background: 36 56% 68%;
     --foreground: 20 20% 12%;
-    --card: 36 50% 62%;
+    --card: 30 30% 96%;
     --card-foreground: 20 20% 12%;
-    --popover: 36 50% 65%;
+    --popover: 0 0% 100%;
     --popover-foreground: 20 20% 12%;
     --primary: 16 64% 48%;
-    --primary-foreground: 36 56% 92%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 36 45% 60%;
     --secondary-foreground: 20 20% 12%;
     --muted: 36 40% 62%;
     --muted-foreground: 20 15% 32%;
     --accent: 16 64% 48%;
-    --accent-foreground: 36 56% 92%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 30 30% 55%;
@@ -37,7 +37,7 @@
     --sidebar-ring: 16 64% 48%;
 
     --banner: 16 64% 48%;
-    --banner-foreground: 36 56% 92%;
+    --banner-foreground: 0 0% 100%;
 
     font-family: 'Lato', sans-serif;
   }

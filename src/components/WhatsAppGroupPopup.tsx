@@ -25,7 +25,7 @@ const WhatsAppGroupPopup = () => {
 
   return (
     <div className="fixed bottom-24 right-6 z-50 animate-fade-in">
-      <div className="bg-card border border-border/50 rounded-2xl shadow-2xl p-5 max-w-[300px] relative">
+      <div className="bg-popover border border-border/50 rounded-2xl shadow-2xl p-5 max-w-[300px] relative">
         <button
           onClick={handleDismiss}
           className="absolute top-3 right-3 text-muted-foreground hover:text-foreground transition-colors"
