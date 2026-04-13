@@ -187,7 +187,7 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             {reviews.map((review, i) => (
-              <div key={i} className="bg-background rounded-lg p-6 space-y-3">
+              <div key={i} className="bg-popover rounded-lg p-6 space-y-3">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-sans font-medium text-sm">{review.name}</p>
