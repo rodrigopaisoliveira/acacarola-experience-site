@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, MapPin, Clock } from "lucide-react";
+import logoBlack from "@/assets/logo-cacarola-black.png";
 import WhatsAppButton from "./WhatsAppButton";
 import WhatsAppGroupPopup from "./WhatsAppGroupPopup";
 
@@ -116,9 +117,7 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="max-w-6xl mx-auto px-6 py-14 md:py-18">
           {/* Top - Brand */}
           <div className="text-center mb-10">
-            <h3 className="font-serif text-2xl md:text-4xl tracking-[0.05em] mb-3">
-              A Caçarola
-            </h3>
+            <img src={logoBlack} alt="A Caçarola" className="mx-auto w-32 md:w-40 mb-3" />
             <p className="font-sans text-muted-foreground text-xs tracking-widest uppercase">
               Restaurante · Pontinha, Lisboa
             </p>
