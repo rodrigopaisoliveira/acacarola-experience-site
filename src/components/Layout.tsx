@@ -55,7 +55,7 @@ const Layout = ({ children }: LayoutProps) => {
             A Caçarola
           </Link>
           <a
-            href="tel:+351214794087"
+            href="tel:+351214780048"
             className="absolute right-6 text-foreground hover:text-primary transition-colors"
             aria-label="Ligar para o restaurante"
           >
@@ -101,7 +101,7 @@ const Layout = ({ children }: LayoutProps) => {
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Phone size={15} className="shrink-0 text-primary" />
-                <a href="tel:+351214794087" className="hover:text-primary transition-colors">214 794 087</a>
+                <a href="tel:+351214780048" className="hover:text-primary transition-colors">21 478 0048</a>
               </div>
             </div>
           </aside>
@@ -135,7 +135,7 @@ const Layout = ({ children }: LayoutProps) => {
             <div className="space-y-2">
               <Phone size={18} className="mx-auto text-primary" />
               <p className="font-sans text-sm text-muted-foreground">
-                <a href="tel:+351214794087" className="hover:text-primary transition-colors">+351 214 794 087</a>
+                <a href="tel:+351214780048" className="hover:text-primary transition-colors">+351 21 478 0048</a>
               </p>
             </div>
             <div className="space-y-2">

@@ -78,7 +78,7 @@ const ReservarMesaPage = () => {
 
             {isMobile ? (
               <a
-                href="tel:+351214794087"
+                href="tel:+351214780048"
                 className="inline-flex items-center gap-3 rounded-full bg-primary text-primary-foreground px-10 py-4 text-sm font-sans tracking-[0.2em] uppercase hover:bg-primary/90 transition-colors shadow-md"
               >
                 <Phone size={18} />
@@ -87,7 +87,7 @@ const ReservarMesaPage = () => {
             ) : (
               <div className="space-y-4">
                 <p className="text-2xl font-serif tracking-wider text-foreground">
-                  214 794 087
+                  21 478 0048
                 </p>
                 <p className="text-xs text-muted-foreground font-sans tracking-widest uppercase">
                   Terça a Domingo · 12h–23h
