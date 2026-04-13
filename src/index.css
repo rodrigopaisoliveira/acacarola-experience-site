@@ -6,38 +6,38 @@
 
 @layer base {
   :root {
-    --background: 36 56% 68%;
+    --background: 0 0% 100%;
     --foreground: 20 20% 12%;
-    --card: 36 50% 62%;
+    --card: 36 30% 96%;
     --card-foreground: 20 20% 12%;
-    --popover: 36 50% 65%;
+    --popover: 0 0% 100%;
     --popover-foreground: 20 20% 12%;
     --primary: 16 64% 48%;
-    --primary-foreground: 36 56% 92%;
-    --secondary: 36 45% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 36 56% 68%;
     --secondary-foreground: 20 20% 12%;
-    --muted: 36 40% 62%;
-    --muted-foreground: 20 15% 32%;
+    --muted: 36 20% 94%;
+    --muted-foreground: 20 12% 40%;
     --accent: 16 64% 48%;
-    --accent-foreground: 36 56% 92%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 30 30% 55%;
-    --input: 30 30% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 36 20% 85%;
+    --input: 36 20% 88%;
     --ring: 16 64% 48%;
     --radius: 0.5rem;
 
     --sidebar-background: 20 25% 14%;
-    --sidebar-foreground: 36 56% 92%;
+    --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 16 64% 48%;
-    --sidebar-primary-foreground: 36 56% 92%;
+    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 20 20% 20%;
-    --sidebar-accent-foreground: 36 56% 92%;
+    --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 20 20% 20%;
     --sidebar-ring: 16 64% 48%;
 
     --banner: 16 64% 48%;
-    --banner-foreground: 36 56% 92%;
+    --banner-foreground: 0 0% 100%;
 
     font-family: 'Lato', sans-serif;
   }
