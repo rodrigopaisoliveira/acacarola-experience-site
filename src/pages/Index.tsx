@@ -180,7 +180,7 @@ const Index = () => {
             <div className="text-center">
               <div className="flex items-center gap-2">
                 <TripadvisorIcon size={20} />
-                <span className="text-2xl font-serif font-bold">4,0</span>
+                <span className="text-2xl font-serif font-bold">4,2</span>
                 <span className="text-muted-foreground font-sans text-sm">/5</span>
               </div>
               <p className="text-xs text-muted-foreground font-sans">Tripadvisor · 21 críticas</p>
