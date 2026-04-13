@@ -3,46 +3,48 @@ import grupoBacalhau from "@/assets/grupo-bacalhau.jpg";
 
 const ementas = [
   {
-    title: "Ementa 1",
-    price: "30,00 €",
-    entradas: "Pão, manteiga, queijo alentejano, presunto, azeitonas e salgadinhos",
+    title: "Menu 1",
+    price: "25€",
+    entradas: "Pão, manteigas, queijo fresco e queijo seco",
     pratos: [
-      { label: "1º Prato", desc: "Bacalhau c/ Natas gratinado c/ camarão" },
-      { label: "2º Prato", desc: "Naco na Pedra", extra: "Acompanhamentos: batata frita, arroz, feijão preto e couve salteada" },
+      { label: "1º Prato", desc: "Feijoada de Gambas" },
+      { label: "2º Prato", desc: "Lombo de Porco Assado no Forno", extra: "Acompanhado por batatas fritas, arroz e legumes" },
     ],
-    includes: "Bebidas, 1 sobremesa à escolha e café",
+    bebidas: "Refrigerantes e água à discrição; vinho no jarro (branca ou tinta) e sangria têm um limite de 75cl p/adulto",
+    sobremesa: "Doces: Mousse de Chocolate/Manga, Leite Creme, Bolo de Bolacha. Frutas: Laranja, Abacaxi, Kiwi",
+    extras: "1 Café por Pessoa",
   },
   {
-    title: "Ementa 2",
-    price: "35,00 €",
-    entradas: "Pão, manteiga, queijo alentejano, presunto, gambas à Guilho, azeitonas e salgadinhos",
+    title: "Menu 2",
+    price: "28€",
+    entradas: "Pão, manteigas, queijo fresco, queijo seco e entrada mista",
     pratos: [
       { label: "1º Prato", desc: "Bacalhau à Brás" },
-      { label: "2º Prato", desc: "Picanha Fatiada Grelhada c/ abacaxi", extra: "Acompanhamentos: batata frita, arroz, feijão preto e couve salteada" },
+      { label: "2º Prato", desc: "Churrasquinho de Porco", extra: "Salsichas/Lagartinhos/Bifes de Porco" },
     ],
-    includes: "Bebidas, 1 sobremesa à escolha e café",
+    sameAs: "Os restantes itens são iguais ao Menu 1",
   },
   {
-    title: "Ementa 3",
-    price: "40,00 €",
-    entradas: "Camarão cozido (100g/pessoa), pão, manteiga, queijo alentejano, azeitonas, presunto e salgadinhos",
+    title: "Menu 3",
+    price: "38€",
+    entradas: "Pão, manteigas, queijo fresco, queijo seco e gambas à Guilho",
     pratos: [
-      { label: "Prato", desc: "Churrasco Misto de Porco Preto com Picanha", extra: "Acompanhamentos: batata frita, arroz, feijão preto e couve salteada" },
+      { label: "1º Prato", desc: "Massinha de Peixe" },
+      { label: "2º Prato", desc: "Picanha e Secretos de Porco Preto c/ Abacaxi" },
     ],
-    includes: "Bebidas, 1 sobremesa à escolha e café",
+    sameAs: "Os restantes itens são iguais ao Menu 1",
   },
 ];
 
 const normas = [
-  "Bebidas incluídas: vinho alentejano \"Trinca Bolotas\", sangria, refrigerantes, águas e cerveja a copo. Média por pessoa: ~0,75L.",
-  "A escolha do menu tem que ser feita com antecedência mínima de 24 horas.",
-  "Só é permitido consumir bebidas adquiridas no estabelecimento.",
-  "Nos menus que têm incluído prato de peixe e prato de carne, estes são servidos sequencialmente.",
-  "Sobremesas (1 por pessoa à escolha): leite creme, mousse de chocolate, mousse de manga, baba de camelo, salada de frutas ou gelado Vienetta.",
-  "Todas as pessoas do grupo têm de optar pelo mesmo menu.",
-  "Mínimo de 10 pessoas.",
-  "Crianças até 4 anos não pagam. Dos 5 aos 9 anos pagam 50%. Reserva-se o direito de pedir identificação.",
-  "I.V.A. incluído à taxa legal. Temos Livro de Reclamações.",
+  "Mínimo de 15 pessoas.",
+  "Todos devem optar pelo mesmo menu.",
+  "A reserva deve ser feita com, pelo menos, 48h de antecedência.",
+  "Crianças até aos 4 anos não pagam.",
+  "Crianças dos 5 aos 9 anos pagam metade do valor do menu.",
+  "Reserva-se o direito de pedir o Cartão de Cidadão para confirmação da identidade dos mesmos.",
+  "I.V.A. incluído à taxa legal.",
+  "Temos Livro de Reclamações.",
 ];
 
 const MenuGrupoPage = () => {
@@ -52,7 +54,7 @@ const MenuGrupoPage = () => {
         Menus de Grupo
       </h1>
       <p className="text-center text-muted-foreground font-sans mb-12">
-        Mínimo 10 pessoas · Reserva com 24h de antecedência
+        Mínimo 15 pessoas · Reserva com 48h de antecedência
       </p>
 
       {/* Hero image */}
@@ -95,9 +97,31 @@ const MenuGrupoPage = () => {
                 </div>
               ))}
 
-              <div className="pt-3 border-t border-border">
-                <p className="text-sm text-muted-foreground">{ementa.includes}</p>
-              </div>
+              {ementa.bebidas && (
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-1">Bebidas</h3>
+                  <p className="text-sm text-muted-foreground">{ementa.bebidas}</p>
+                </div>
+              )}
+
+              {ementa.sobremesa && (
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-1">Sobremesa</h3>
+                  <p className="text-sm text-muted-foreground">{ementa.sobremesa}</p>
+                </div>
+              )}
+
+              {ementa.extras && (
+                <div className="pt-3 border-t border-border">
+                  <p className="text-sm text-foreground font-medium">{ementa.extras}</p>
+                </div>
+              )}
+
+              {ementa.sameAs && (
+                <div className="pt-3 border-t border-border">
+                  <p className="text-xs text-muted-foreground italic">{ementa.sameAs}</p>
+                </div>
+              )}
             </div>
           </div>
         ))}
