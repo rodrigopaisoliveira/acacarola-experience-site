@@ -114,13 +114,14 @@ const Index = () => {
       {/* About text only */}
       <section className="py-20 px-6 max-w-5xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-serif mb-6 tracking-wide">
-          Simplicidade e Simpatia
+          Restaurante Novo Edmundo: Onde Cada Refeição Sabe a Casa
         </h2>
         <p className="text-muted-foreground font-sans leading-relaxed max-w-3xl mx-auto">
-          De portas abertas desde 1964, o Novo Edmundo nasceu como "O Café do Vale" — uma das casas mais
-          emblemáticas da Pontinha. Em 1994, o espaço foi renovado e dedicado à boa mesa: grelhados, peixe
-          fresco, mariscos e doces caseiros, servidos com a simpatia de sempre. Três salas, 135 lugares e
-          uma tradição que se mantém viva há mais de 60 anos.
+          No Restaurante Novo Edmundo, recebemo-lo como família no coração da Pontinha. Servimos pratos
+          tradicionais portugueses com porções generosas, tal como os nossos clientes habituais apreciam. O
+          nosso espaço acolhedor e descontraído é perfeito para partilhar momentos especiais, seja num
+          almoço em família, num encontro de grupo ou numa celebração privada. Estamos aqui para tornar
+          cada ocasião autêntica, confortável e memorável.
         </p>
       </section>
 
