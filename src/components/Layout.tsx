@@ -35,7 +35,7 @@ const Layout = ({ children }: LayoutProps) => {
       {/* Sticky Header */}
       <div className="sticky top-0 z-40">
         {/* Top Banner */}
-        <div className="bg-accent text-accent-foreground text-center py-2 px-4 text-[10px] md:text-sm font-sans tracking-wider md:tracking-widest uppercase flex items-center justify-center gap-2 md:gap-4">
+        <div className="bg-banner text-banner-foreground text-center py-2 px-4 text-[10px] md:text-sm font-sans tracking-wider md:tracking-widest uppercase flex items-center justify-center gap-2 md:gap-4">
           <span className="hidden sm:inline">Jantem juntos, comemorem melhor –</span>
           <Link to="/reservas" className="font-semibold hover:underline flex items-center gap-1">
             Reserve a sua mesa <span className="text-base">›</span>

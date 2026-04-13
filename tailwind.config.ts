@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ["'Playfair Display'", "serif"],
+        serif: ["'Abril Fatface'", "serif"],
         sans: ["'Lato'", "sans-serif"],
       },
       colors: {
