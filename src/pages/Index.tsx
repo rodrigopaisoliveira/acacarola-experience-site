@@ -54,28 +54,28 @@ const carouselImages = [
 
 const reviews = [
   {
-    name: "Revisor de Tripadvisor",
+    name: "Luís F",
     source: "Tripadvisor",
     rating: 5,
-    text: "Fui com amigos, excelente carta de apresentação. Para todos os gostos, desde peixe a carne tudo fresco. Recomendo a picanha!",
+    text: "Bom restaurante. Fui um pouco à descoberta e com alguma incerteza, mas gostei da escolha. Staff muito atencioso e eficaz, comida bem confeccionada e preços dentro da normalidade. Aconselho este espaço. Bom naco na pedra...",
   },
   {
-    name: "Revisor de Tripadvisor",
+    name: "Julietaf",
     source: "Tripadvisor",
     rating: 5,
-    text: "Bem localizado, no centro da Pontinha, com bom serviço, atendimento simpático, boa variedade de pratos, de comida tradicional portuguesa.",
+    text: "Se gosta de comida portuguesa recomendo este restaurante da Pontinha. Com estacionamento ao pé, é um bom sítio para degustar pratos antigos que eram cozinhados pelas nossas avós.",
   },
   {
-    name: "Kd Bn",
-    source: "Google",
-    rating: 5,
-    text: "Amazing food! Food is so tasty and comes quick. Specially Hot Stone steak. Its come as a raw and you cook it on the stone!",
-  },
-  {
-    name: "Veda Ko",
-    source: "Google",
+    name: "ruijesoliv",
+    source: "Tripadvisor",
     rating: 4,
-    text: "I really enjoyed this place. A very Portuguese restaurant/spot. Seafood was amazing. They have a great variety of traditional dishes.",
+    text: "Comida caseira bem cozinhada, bons grelhados a preços honestos, serviço rápido e simpatia dos funcionários.",
+  },
+  {
+    name: "gradeiro",
+    source: "Tripadvisor",
+    rating: 5,
+    text: "Nada melhor que um grupo de amigos em torno de uma refeição tradicional, honesta e muito verdadeira, servida com simplicidade mas com a simpatia pessoal e profissional que nos faz querer voltar. Parabéns a toda a equipa!",
   },
 ];
 
@@ -171,19 +171,19 @@ const Index = () => {
             <div className="text-center">
               <div className="flex items-center gap-2">
                 <GoogleIcon size={20} />
-                <span className="text-2xl font-serif font-bold">4,2</span>
+                <span className="text-2xl font-serif font-bold">4,3</span>
                 <span className="text-muted-foreground font-sans text-sm">/5</span>
               </div>
-              <p className="text-xs text-muted-foreground font-sans">Google · 2,3 mil críticas</p>
+              <p className="text-xs text-muted-foreground font-sans">Google · 395 críticas</p>
             </div>
             <div className="w-px h-10 bg-border" />
             <div className="text-center">
               <div className="flex items-center gap-2">
                 <TripadvisorIcon size={20} />
-                <span className="text-2xl font-serif font-bold">3,8</span>
+                <span className="text-2xl font-serif font-bold">4,0</span>
                 <span className="text-muted-foreground font-sans text-sm">/5</span>
               </div>
-              <p className="text-xs text-muted-foreground font-sans">Tripadvisor · 123 críticas</p>
+              <p className="text-xs text-muted-foreground font-sans">Tripadvisor · 21 críticas</p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
@@ -211,7 +211,7 @@ const Index = () => {
           </div>
           <div className="flex justify-center">
             <a
-              href="https://www.google.com/maps/place/Novo+Edmundo/@38.7633,-9.2,17z/data=!4m8!3m7!1s0xd1ecce4687c4c0d:0xd74e8fdc7c08398c!8m2!3d38.7633!4d-9.2!9m1!1b1!16s%2Fg%2F11c54h3y5x"
+              href="https://www.tripadvisor.pt/Restaurant_Review-g3135840-d5959931-Reviews-Restaurante_a_Cacarola-Odivelas_Lisbon_District_Central_Portugal.html"
               target="_blank"
               rel="noopener noreferrer"
             >
