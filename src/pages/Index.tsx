@@ -97,11 +97,11 @@ const Index = () => {
     <div>
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <img src={heroBg} alt="Interior acolhedor do Novo Edmundo" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <img src={heroBg} alt="Interior acolhedor do A Caçarola" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-foreground/40" />
         <div className="relative z-10 text-center space-y-10 px-6">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif tracking-[0.15em] sm:tracking-[0.2em] text-primary-foreground uppercase drop-shadow-lg">
-            Novo Edmundo
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif tracking-[0.05em] sm:tracking-[0.08em] text-primary-foreground uppercase drop-shadow-lg">
+            A Caçarola
           </h1>
           <Link to="/reservas">
             <Button className="mt-6 rounded-full px-12 py-7 text-base tracking-[0.25em] uppercase bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-sans font-medium shadow-lg">
@@ -114,10 +114,10 @@ const Index = () => {
       {/* About text only */}
       <section className="py-20 px-6 max-w-5xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-serif mb-6 tracking-wide">
-          Restaurante Novo Edmundo: Onde Cada Refeição Sabe a Casa
+          Restaurante A Caçarola: Onde Cada Refeição Sabe a Casa
         </h2>
         <p className="text-muted-foreground font-sans leading-relaxed max-w-3xl mx-auto">
-          No Restaurante Novo Edmundo, recebemo-lo como família no coração da Pontinha. Servimos pratos
+          No Restaurante A Caçarola, recebemo-lo como família no coração da Pontinha. Servimos pratos
           tradicionais portugueses com porções generosas, tal como os nossos clientes habituais apreciam. O
           nosso espaço acolhedor e descontraído é perfeito para partilhar momentos especiais, seja num
           almoço em família, num encontro de grupo ou numa celebração privada. Estamos aqui para tornar
@@ -227,10 +227,10 @@ const Index = () => {
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="rounded-2xl overflow-hidden h-64 md:h-80">
-            <img src={interior1} alt="Interior acolhedor do Novo Edmundo" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" width={1280} height={854} />
+            <img src={interior1} alt="Interior acolhedor do A Caçarola" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" width={1280} height={854} />
           </div>
           <div className="rounded-2xl overflow-hidden h-64 md:h-80">
-            <img src={exterior1} alt="Fachada do Novo Edmundo ao entardecer" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" width={1280} height={854} />
+            <img src={exterior1} alt="Fachada do A Caçarola ao entardecer" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" width={1280} height={854} />
           </div>
         </div>
       </section>
@@ -254,7 +254,7 @@ const Index = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização Novo Edmundo"
+              title="Localização A Caçarola"
             />
           </div>
 

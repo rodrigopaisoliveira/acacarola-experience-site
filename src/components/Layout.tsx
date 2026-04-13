@@ -38,7 +38,7 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="bg-banner text-banner-foreground text-center py-2 px-4 text-[10px] md:text-sm font-sans tracking-wider md:tracking-widest uppercase flex items-center justify-center gap-2 md:gap-4">
           <span className="hidden sm:inline">Jantem juntos, comemorem melhor –</span>
           <Link to="/reservas" className="font-semibold hover:underline flex items-center gap-1">
-            Reserve a sua mesa <span className="text-base">›</span>
+            Reserve a sua experiência <span className="text-base">›</span>
           </Link>
         </div>
 
@@ -51,8 +51,8 @@ const Layout = ({ children }: LayoutProps) => {
           >
             <Menu size={28} />
           </button>
-          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="font-serif text-xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.2em] sm:tracking-[0.3em] text-foreground uppercase font-semibold whitespace-nowrap">
-            Novo Edmundo
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="font-serif text-xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.05em] sm:tracking-[0.08em] text-foreground uppercase font-normal whitespace-nowrap">
+            A Caçarola
           </Link>
           <a
             href="tel:+351214794087"
@@ -73,7 +73,7 @@ const Layout = ({ children }: LayoutProps) => {
           />
           <aside className="relative w-80 max-w-[85vw] bg-background text-foreground h-full animate-slide-in flex flex-col shadow-2xl">
             <div className="flex items-center justify-between p-8 pb-4">
-              <span className="font-serif text-lg tracking-[0.15em] uppercase text-primary">Novo Edmundo</span>
+              <span className="font-serif text-lg tracking-[0.05em] text-primary">A Caçarola</span>
               <button onClick={() => setSidebarOpen(false)} aria-label="Fechar menu" className="w-8 h-8 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors">
                 <X size={18} />
               </button>
@@ -116,11 +116,11 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="max-w-6xl mx-auto px-6 py-14 md:py-18">
           {/* Top - Brand */}
           <div className="text-center mb-10">
-            <h3 className="font-serif text-2xl md:text-4xl tracking-[0.15em] uppercase mb-3">
-              Novo Edmundo
+            <h3 className="font-serif text-2xl md:text-4xl tracking-[0.05em] mb-3">
+              A Caçarola
             </h3>
             <p className="font-sans text-muted-foreground text-xs tracking-widest uppercase">
-              Desde 1964 · Pontinha, Lisboa
+              Restaurante · Pontinha, Lisboa
             </p>
           </div>
 
@@ -162,7 +162,7 @@ const Layout = ({ children }: LayoutProps) => {
               </a>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs text-muted-foreground font-sans">
-              <p>© {new Date().getFullYear()} Novo Edmundo</p>
+              <p>© {new Date().getFullYear()} A Caçarola</p>
               <span className="hidden sm:inline">·</span>
               <a
                 href="https://www.livroreclamacoes.pt"
