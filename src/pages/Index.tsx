@@ -24,6 +24,7 @@ const TripadvisorIcon = ({ size = 16, className = "" }: { size?: number; classNa
 );
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
+import logoWhite from "@/assets/logo-cacarola-white.png";
 import gallerySalad from "@/assets/gallery-salad.jpg";
 import galleryPotatoes from "@/assets/gallery-potatoes.jpg";
 import galleryFish from "@/assets/gallery-fish.jpg";
@@ -99,10 +100,8 @@ const Index = () => {
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <img src={heroBg} alt="Interior acolhedor do A Caçarola" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-foreground/40" />
-        <div className="relative z-10 text-center space-y-10 px-6">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif tracking-[0.05em] sm:tracking-[0.08em] text-primary-foreground uppercase drop-shadow-lg">
-            A Caçarola
-          </h1>
+        <div className="relative z-10 text-center space-y-6 px-6">
+          <img src={logoWhite} alt="A Caçarola — Restaurante" className="mx-auto w-48 sm:w-56 md:w-72 lg:w-80 drop-shadow-lg" width={400} height={400} />
           <Link to="/reservas">
             <Button className="mt-6 rounded-full px-12 py-7 text-base tracking-[0.25em] uppercase bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-sans font-medium shadow-lg">
               Reserve Agora
