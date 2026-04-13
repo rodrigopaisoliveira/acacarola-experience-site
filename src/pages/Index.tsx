@@ -103,7 +103,7 @@ const Index = () => {
         <div className="relative z-10 text-center space-y-6 px-6">
           <img src={logoWhite} alt="A Caçarola — Restaurante" className="mx-auto w-48 sm:w-56 md:w-72 lg:w-80 drop-shadow-lg" width={400} height={400} />
           <Link to="/reservas">
-            <Button className="mt-6 rounded-full px-12 py-7 text-base tracking-[0.25em] uppercase bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-sans font-medium shadow-lg">
+            <Button className="mt-6 rounded-full px-8 py-5 text-xs tracking-[0.2em] uppercase bg-primary-foreground text-foreground hover:bg-primary-foreground/90 font-serif shadow-lg">
               Reserve Agora
             </Button>
           </Link>
@@ -113,7 +113,7 @@ const Index = () => {
       {/* About text only */}
       <section className="py-20 px-6 max-w-5xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-serif mb-6 tracking-wide">
-          Restaurante A Caçarola: Onde Cada Refeição Sabe a Casa
+          Onde Cada Refeição Sabe a Casa
         </h2>
         <p className="text-muted-foreground font-sans leading-relaxed max-w-3xl mx-auto">
           No Restaurante A Caçarola, recebemo-lo como família no coração da Pontinha. Servimos pratos
