@@ -55,7 +55,7 @@ const Layout = ({ children }: LayoutProps) => {
             A Caçarola
           </Link>
           <a
-            href="tel:+351214794087"
+            href="tel:+351214780048"
             className="absolute right-6 text-foreground hover:text-primary transition-colors"
             aria-label="Ligar para o restaurante"
           >
@@ -97,11 +97,11 @@ const Layout = ({ children }: LayoutProps) => {
             <div className="p-8 pt-4 border-t border-border space-y-4">
               <div className="flex items-start gap-3 text-sm text-muted-foreground">
                 <MapPin size={15} className="mt-0.5 shrink-0 text-primary" />
-                <a href="https://maps.google.com/?q=Rua+Dona+Maria+II+13A,+Pontinha" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Rua Dona Maria II 13A, Pontinha</a>
+                <a href="https://maps.google.com/?q=Av.+dos+Bombeiros+Voluntários+18,+Pontinha" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Av. dos Bombeiros Voluntários 18, Pontinha</a>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Phone size={15} className="shrink-0 text-primary" />
-                <a href="tel:+351214794087" className="hover:text-primary transition-colors">214 794 087</a>
+                <a href="tel:+351214780048" className="hover:text-primary transition-colors">21 478 0048</a>
               </div>
             </div>
           </aside>
@@ -128,14 +128,14 @@ const Layout = ({ children }: LayoutProps) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mb-10 text-center">
             <div className="space-y-2">
               <MapPin size={18} className="mx-auto text-primary" />
-              <a href="https://maps.google.com/?q=Rua+Dona+Maria+II+13A,+2720-289+Pontinha" target="_blank" rel="noopener noreferrer" className="font-sans text-sm text-muted-foreground hover:text-primary transition-colors">
-                Rua Dona Maria II 13A<br />2720-289 Pontinha
+              <a href="https://maps.google.com/?q=Av.+dos+Bombeiros+Voluntários+18,+1675-107+Pontinha" target="_blank" rel="noopener noreferrer" className="font-sans text-sm text-muted-foreground hover:text-primary transition-colors">
+                Av. dos Bombeiros Voluntários 18<br />1675-107 Pontinha
               </a>
             </div>
             <div className="space-y-2">
               <Phone size={18} className="mx-auto text-primary" />
               <p className="font-sans text-sm text-muted-foreground">
-                <a href="tel:+351214794087" className="hover:text-primary transition-colors">+351 214 794 087</a>
+                <a href="tel:+351214780048" className="hover:text-primary transition-colors">+351 21 478 0048</a>
               </p>
             </div>
             <div className="space-y-2">

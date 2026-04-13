@@ -17,7 +17,7 @@ const ReservasPage = () => {
         </h2>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <a
-            href="https://wa.me/351214794087?text=Olá, gostaria de fazer uma encomenda"
+            href="https://wa.me/351214780048?text=Olá, gostaria de fazer uma encomenda"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-foreground text-background px-10 py-5 text-sm font-sans tracking-[0.2em] uppercase hover:bg-foreground/90 transition-colors min-w-[200px] inline-block text-center"
@@ -25,7 +25,7 @@ const ReservasPage = () => {
             Entrega
           </a>
           <a
-            href="https://wa.me/351214794087?text=Olá, gostaria de encomendar para takeaway"
+            href="https://wa.me/351214780048?text=Olá, gostaria de encomendar para takeaway"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-foreground text-background px-10 py-5 text-sm font-sans tracking-[0.2em] uppercase hover:bg-foreground/90 transition-colors min-w-[200px] inline-block text-center"
