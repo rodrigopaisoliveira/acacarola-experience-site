@@ -85,15 +85,15 @@ const MenuPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <div className="pt-10 pb-4 px-4 text-center">
+    <div className="min-h-screen bg-popover">
+      <div className="pt-10 pb-4 px-4 text-center bg-background">
         <h1 className="text-4xl md:text-5xl font-serif tracking-wide mb-1">Menu</h1>
         <p className="text-muted-foreground font-sans text-sm">Cozinha Tradicional Portuguesa</p>
       </div>
 
       {/* Sticky category bar */}
       <nav
-        className="sticky z-30 bg-primary/90 backdrop-blur-sm shadow-sm border-b border-primary-foreground/10"
+        className="sticky z-30 bg-foreground backdrop-blur-sm shadow-sm border-b border-foreground/10"
         style={{ top: `${headerHeight}px` }}
       >
         <div className="max-w-5xl mx-auto">
@@ -109,8 +109,8 @@ const MenuPage = () => {
                   onClick={() => handleTabClick(idx)}
                   className={`font-sans text-sm md:text-base px-4 py-3 transition-all whitespace-nowrap ${
                     idx === activeCategory
-                      ? "text-primary-foreground font-semibold border-b-2 border-primary-foreground"
-                      : "text-primary-foreground/70 hover:text-primary-foreground"
+                      ? "text-popover font-semibold border-b-2 border-primary"
+                      : "text-popover/70 hover:text-popover"
                   }`}
                 >
                   {cat.title}
@@ -129,14 +129,14 @@ const MenuPage = () => {
               ref={(el) => (sectionRefs.current[catIdx] = el)}
               className="scroll-mt-40"
             >
-              <h2 className="text-2xl md:text-3xl font-serif text-center tracking-wide mb-8 menu-item-animate opacity-0 translate-y-4 transition-all duration-500">
+              <h2 className="text-2xl md:text-3xl font-serif text-center tracking-wide mb-8 text-foreground menu-item-animate opacity-0 translate-y-4 transition-all duration-500">
                 {category.title}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0">
                 {category.items.map((item, idx) => (
                   <div
                     key={idx}
-                    className="menu-item-animate opacity-0 translate-y-4 transition-all duration-500 flex justify-between items-baseline gap-4 py-3.5 border-b border-border/60"
+                    className="menu-item-animate opacity-0 translate-y-4 transition-all duration-500 flex justify-between items-baseline gap-4 py-3.5 border-b border-foreground/10"
                     style={{ transitionDelay: `${(idx % 6) * 60}ms` }}
                   >
                     <div className="flex-1">
@@ -148,7 +148,7 @@ const MenuPage = () => {
                       )}
                     </div>
                     {item.price && (
-                      <span className="font-sans text-foreground whitespace-nowrap font-medium">
+                      <span className="font-sans text-primary whitespace-nowrap font-semibold">
                         {item.price}
                       </span>
                     )}
