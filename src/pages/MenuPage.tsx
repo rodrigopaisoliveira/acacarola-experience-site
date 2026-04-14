@@ -7,8 +7,8 @@ import menuSobremesas from "@/assets/menu-sobremesas.jpg";
 // Images to show after specific sections (by index)
 const sectionImages: Record<number, { src: string; alt: string }> = {
   0: { src: menuEntradas, alt: "Tábua de entradas tradicionais" },
-  3: { src: menuEspecialidades, alt: "Especialidades da casa" },
-  7: { src: menuSobremesas, alt: "Sobremesas caseiras" },
+  2: { src: menuEspecialidades, alt: "Especialidades da casa" },
+  4: { src: menuSobremesas, alt: "Sobremesas caseiras" },
 };
 
 const MenuPage = () => {
