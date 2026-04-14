@@ -7,9 +7,9 @@ const ReservarMesaPage = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div>
+    <div className="min-h-screen bg-popover">
       {/* Hero header */}
-      <section className="bg-primary/5 py-10 md:py-16 text-center border-b border-border/50">
+      <section className="bg-background py-10 md:py-16 text-center border-b border-border/50">
         <h1 className="text-2xl md:text-4xl font-serif tracking-[0.15em] uppercase text-foreground">
           Reservas & Encomendas
         </h1>
@@ -17,13 +17,13 @@ const ReservarMesaPage = () => {
 
       {/* Tab switcher */}
       <section className="py-10 px-6 max-w-2xl mx-auto">
-        <div className="flex rounded-full bg-muted p-1.5 gap-1">
+        <div className="flex rounded-full bg-foreground/10 p-1.5 gap-1">
           <button
             onClick={() => setActiveTab("reservar")}
             className={`flex-1 flex items-center justify-center gap-2 py-3.5 rounded-full text-sm font-sans tracking-widest uppercase transition-all duration-300 ${
               activeTab === "reservar"
                 ? "bg-primary text-primary-foreground shadow-md"
-                : "text-muted-foreground hover:text-foreground"
+                : "text-foreground/60 hover:text-foreground"
             }`}
           >
             <UtensilsCrossed size={16} />
@@ -34,7 +34,7 @@ const ReservarMesaPage = () => {
             className={`flex-1 flex items-center justify-center gap-2 py-3.5 rounded-full text-sm font-sans tracking-widest uppercase transition-all duration-300 ${
               activeTab === "encomendar"
                 ? "bg-primary text-primary-foreground shadow-md"
-                : "text-muted-foreground hover:text-foreground"
+                : "text-foreground/60 hover:text-foreground"
             }`}
           >
             <ShoppingBag size={16} />
@@ -48,8 +48,8 @@ const ReservarMesaPage = () => {
         <>
           {/* TheFork Widget */}
           <section className="pb-16 px-4">
-            <div className="max-w-2xl mx-auto bg-card rounded-2xl border border-border/50 overflow-hidden shadow-sm">
-              <div className="text-center py-6 border-b border-border/30">
+            <div className="max-w-2xl mx-auto bg-popover rounded-2xl border border-foreground/10 overflow-hidden shadow-sm">
+              <div className="text-center py-6 border-b border-foreground/10">
                 <h2 className="font-serif text-lg tracking-[0.1em] uppercase text-foreground">
                   Escolha a data e hora
                 </h2>
@@ -65,7 +65,7 @@ const ReservarMesaPage = () => {
         </>
       ) : (
         <section className="px-6 pb-16 max-w-lg mx-auto text-center">
-          <div className="bg-card rounded-2xl border border-border/50 p-10 shadow-sm">
+          <div className="bg-popover rounded-2xl border border-foreground/10 p-10 shadow-sm">
             <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
               <Phone size={28} className="text-primary" />
             </div>
