@@ -24,7 +24,7 @@ const TripadvisorIcon = ({ size = 16, className = "" }: { size?: number; classNa
 );
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
-import logoWhite from "@/assets/logo-cacarola-white.png";
+import logoOriginal from "@/assets/logo-cacarola-original.jpg";
 import carouselNew1 from "@/assets/carousel-new-1.jpg";
 import carouselNew2 from "@/assets/carousel-new-2.jpg";
 import carouselNew3 from "@/assets/carousel-new-3.jpg";
@@ -34,6 +34,7 @@ import carouselNew6 from "@/assets/carousel-new-6.jpg";
 import carouselNew7 from "@/assets/carousel-new-7.jpg";
 import carouselNew8 from "@/assets/carousel-new-8.jpg";
 import carouselNew9 from "@/assets/carousel-new-9.jpg";
+import carouselNew10 from "@/assets/carousel-new-10.jpg";
 import interior1 from "@/assets/interior-1.jpg";
 import exterior1 from "@/assets/exterior-1.jpg";
 
@@ -47,6 +48,7 @@ const carouselImages = [
   { src: carouselNew7, alt: "Peixe cozido com legumes" },
   { src: carouselNew8, alt: "Costeleta grelhada com ovo" },
   { src: carouselNew9, alt: "Carne assada com batatas fritas" },
+  { src: carouselNew10, alt: "Peixinhos fritos com arroz de legumes" },
 ];
 
 const reviews = [
@@ -97,7 +99,7 @@ const Index = () => {
         <img src={heroBg} alt="Interior acolhedor do A Caçarola" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-foreground/40" />
         <div className="relative z-10 text-center space-y-6 px-6">
-          <img src={logoWhite} alt="A Caçarola — Restaurante" className="mx-auto w-56 sm:w-64 md:w-80 lg:w-96 drop-shadow-lg" width={400} height={400} />
+          <img src={logoOriginal} alt="A Caçarola — Restaurante" className="mx-auto w-56 sm:w-64 md:w-80 lg:w-96 drop-shadow-lg rounded-2xl" width={400} height={400} />
           <Link to="/reservas">
             <Button className="mt-6 border-2 border-primary-foreground/80 rounded-full px-10 py-6 text-sm tracking-[0.2em] uppercase bg-transparent text-primary-foreground hover:bg-primary-foreground/10 font-serif shadow-none">
               Reserve Agora
