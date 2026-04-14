@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, MapPin, Clock } from "lucide-react";
-import logoBlack from "@/assets/logo-cacarola-black.png";
+import logoOriginal from "@/assets/logo-cacarola-original.jpg";
 import WhatsAppButton from "./WhatsAppButton";
 import WhatsAppGroupPopup from "./WhatsAppGroupPopup";
 
