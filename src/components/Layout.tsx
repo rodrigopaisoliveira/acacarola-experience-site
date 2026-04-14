@@ -44,20 +44,20 @@ const Layout = ({ children }: LayoutProps) => {
         </div>
 
         {/* Navbar */}
-        <nav className="relative flex items-center justify-center py-6 md:py-8 px-6 bg-foreground border-b border-foreground/20">
+        <nav className="relative flex items-center justify-center py-6 md:py-8 px-6 bg-background border-b border-border/50">
           <button
             onClick={() => setSidebarOpen(true)}
-            className="absolute left-6 text-popover"
+            className="absolute left-6 text-foreground"
             aria-label="Abrir menu"
           >
             <Menu size={28} />
           </button>
-          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="font-serif text-xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.05em] sm:tracking-[0.08em] text-popover uppercase font-normal whitespace-nowrap">
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="font-serif text-xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.05em] sm:tracking-[0.08em] text-foreground uppercase font-normal whitespace-nowrap">
             A Caçarola
           </Link>
           <a
             href="tel:+351214780048"
-            className="absolute right-6 text-popover hover:text-primary transition-colors"
+            className="absolute right-6 text-foreground hover:text-primary transition-colors"
             aria-label="Ligar para o restaurante"
           >
             <Phone size={22} />
