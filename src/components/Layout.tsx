@@ -72,15 +72,15 @@ const Layout = ({ children }: LayoutProps) => {
             className="absolute inset-0 bg-foreground/40"
             onClick={() => setSidebarOpen(false)}
           />
-          <aside className="relative w-80 max-w-[85vw] bg-background text-foreground h-full animate-slide-in flex flex-col shadow-2xl">
+          <aside className="relative w-80 max-w-[85vw] bg-foreground text-background h-full animate-slide-in flex flex-col shadow-2xl">
             <div className="flex items-center justify-between p-8 pb-4">
-              <span className="font-serif text-lg tracking-[0.05em] text-primary">A Caçarola</span>
-              <button onClick={() => setSidebarOpen(false)} aria-label="Fechar menu" className="w-8 h-8 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors">
+              <span className="font-serif text-lg tracking-[0.05em] text-background">A Caçarola</span>
+              <button onClick={() => setSidebarOpen(false)} aria-label="Fechar menu" className="w-8 h-8 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors text-background">
                 <X size={18} />
               </button>
             </div>
 
-            <div className="h-px bg-border mx-8" />
+            <div className="h-px bg-background/20 mx-8" />
 
             <div className="flex-1 px-8 py-6 space-y-1">
               {sidebarLinks.map((link) => (
@@ -88,21 +88,21 @@ const Layout = ({ children }: LayoutProps) => {
                   key={link.to}
                   to={link.to}
                   onClick={() => setSidebarOpen(false)}
-                  className="block py-3.5 text-base font-sans tracking-wide text-foreground/80 hover:text-primary hover:pl-2 transition-all duration-200"
+                  className="block py-3.5 text-base font-sans tracking-wide text-background/70 hover:text-background hover:pl-2 transition-all duration-200"
                 >
                   {link.label}
                 </Link>
               ))}
             </div>
 
-            <div className="p-8 pt-4 border-t border-border space-y-4">
-              <div className="flex items-start gap-3 text-sm text-muted-foreground">
-                <MapPin size={15} className="mt-0.5 shrink-0 text-primary" />
-                <a href="https://maps.google.com/?q=Av.+dos+Bombeiros+Voluntários+18,+Pontinha" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Av. dos Bombeiros Voluntários 18, Pontinha</a>
+            <div className="p-8 pt-4 border-t border-background/20 space-y-4">
+              <div className="flex items-start gap-3 text-sm text-background/60">
+                <MapPin size={15} className="mt-0.5 shrink-0 text-background/80" />
+                <a href="https://maps.google.com/?q=Av.+dos+Bombeiros+Voluntários+18,+Pontinha" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">Av. dos Bombeiros Voluntários 18, Pontinha</a>
               </div>
-              <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Phone size={15} className="shrink-0 text-primary" />
-                <a href="tel:+351214780048" className="hover:text-primary transition-colors">21 478 0048</a>
+              <div className="flex items-center gap-3 text-sm text-background/60">
+                <Phone size={15} className="shrink-0 text-background/80" />
+                <a href="tel:+351214780048" className="hover:text-background transition-colors">21 478 0048</a>
               </div>
             </div>
           </aside>
