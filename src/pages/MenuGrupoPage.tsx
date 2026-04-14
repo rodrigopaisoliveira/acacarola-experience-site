@@ -97,9 +97,6 @@ const MenuGrupoPage = () => {
         className="sticky z-30 bg-foreground shadow-sm"
         style={{ top: `${headerHeight}px` }}
       >
-
-      {/* Hero image */}
-      <div className="max-w-5xl mx-auto px-6 pt-8">
         <div className="max-w-5xl mx-auto flex">
           {ementas.map((ementa, idx) => (
             <button
@@ -116,6 +113,19 @@ const MenuGrupoPage = () => {
           ))}
         </div>
       </nav>
+
+      {/* Hero image */}
+      <div className="max-w-5xl mx-auto px-6 pt-8">
+        <div className="rounded-xl overflow-hidden shadow-lg">
+          <img
+            src={grupoMesa}
+            alt="Mesa de grupo com pratos tradicionais"
+            width={1280}
+            height={512}
+            className="w-full h-48 md:h-72 object-cover"
+          />
+        </div>
+      </div>
 
       {/* Ementas */}
       <div className="max-w-5xl mx-auto px-6 py-10 space-y-10">
