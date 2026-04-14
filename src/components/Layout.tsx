@@ -117,7 +117,7 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="max-w-6xl mx-auto px-6 py-14 md:py-18">
           {/* Top - Brand */}
           <div className="text-center mb-10">
-            <img src={logoBlack} alt="A Caçarola" className="mx-auto w-32 md:w-40 mb-3" />
+            <img src={logoOriginal} alt="A Caçarola" className="mx-auto w-32 md:w-40 mb-3 rounded-lg" />
             <p className="font-sans text-muted-foreground text-xs tracking-widest uppercase">
               Restaurante · Pontinha, Lisboa
             </p>
