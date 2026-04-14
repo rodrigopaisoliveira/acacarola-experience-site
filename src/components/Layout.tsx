@@ -53,8 +53,9 @@ const Layout = ({ children }: LayoutProps) => {
           >
             <Menu size={28} />
           </button>
-          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <img src={logoBlack} alt="A Caçarola" className="h-10 sm:h-14 md:h-16 lg:h-20" />
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2 sm:gap-3">
+            <img src={logoBlack} alt="A Caçarola" className="h-12 sm:h-16 md:h-20" />
+            <span className="font-serif text-lg sm:text-2xl md:text-3xl tracking-[0.05em] text-foreground uppercase">A Caçarola</span>
           </Link>
           <a
             href="tel:+351214780048"
