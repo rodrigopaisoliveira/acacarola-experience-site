@@ -53,7 +53,7 @@ const ReservarMesaPage = () => {
               </h2>
             </div>
             <iframe
-              src="https://module.lafourchette.com/pt_PT/module/860208-b498f"
+              src="https://widget.thefork.com/35b66897-a978-4da8-aa4d-4258c48ccf50"
               style={{ width: "100%", minHeight: "600px", border: "none" }}
               title="Reservar mesa no TheFork"
               allow="geolocation"
