@@ -92,9 +92,9 @@ const MenuGrupoPage = () => {
         </p>
       </div>
 
-      {/* Sticky menu bar */}
+      {/* Sticky menu bar - mobile only */}
       <nav
-        className="sticky z-30 bg-foreground shadow-sm"
+        className="sticky z-30 bg-foreground shadow-sm lg:hidden"
         style={{ top: `${headerHeight}px` }}
       >
         <div className="max-w-5xl mx-auto flex">
@@ -102,7 +102,7 @@ const MenuGrupoPage = () => {
             <button
               key={ementa.title}
               onClick={() => handleTabClick(idx)}
-              className={`flex-1 py-3 text-sm md:text-base font-sans tracking-wider uppercase transition-all ${
+              className={`flex-1 py-3 text-sm font-sans tracking-wider uppercase transition-all ${
                 idx === activeMenu
                   ? "text-popover font-semibold border-b-2 border-primary"
                   : "text-popover/70 hover:text-popover"
@@ -113,7 +113,7 @@ const MenuGrupoPage = () => {
           ))}
           <button
             onClick={() => handleTabClick(3)}
-            className={`flex-1 py-3 text-sm md:text-base font-sans tracking-wider uppercase transition-all ${
+            className={`flex-1 py-3 text-sm font-sans tracking-wider uppercase transition-all ${
               activeMenu === 3
                 ? "text-popover font-semibold border-b-2 border-primary"
                 : "text-popover/70 hover:text-popover"
