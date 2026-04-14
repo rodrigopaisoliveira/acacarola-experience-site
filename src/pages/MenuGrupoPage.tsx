@@ -111,6 +111,16 @@ const MenuGrupoPage = () => {
               {ementa.title}
             </button>
           ))}
+          <button
+            onClick={() => handleTabClick(3)}
+            className={`flex-1 py-3 text-sm md:text-base font-sans tracking-wider uppercase transition-all ${
+              activeMenu === 3
+                ? "text-popover font-semibold border-b-2 border-primary"
+                : "text-popover/70 hover:text-popover"
+            }`}
+          >
+            Normas
+          </button>
         </div>
       </nav>
 
@@ -202,7 +212,7 @@ const MenuGrupoPage = () => {
       </div>
 
       {/* Normas */}
-      <div className="max-w-5xl mx-auto px-6 pb-12">
+      <div ref={(el) => (sectionRefs.current[3] = el)} className="scroll-mt-40 max-w-5xl mx-auto px-6 pb-12">
         <div className="border border-foreground/10 rounded-lg p-6 md:p-8 bg-popover">
           <h2 className="text-xl md:text-2xl font-serif text-center tracking-wide mb-6">
             Normas para os Menus de Grupo
