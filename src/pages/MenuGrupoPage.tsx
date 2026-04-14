@@ -140,62 +140,63 @@ const MenuGrupoPage = () => {
       {/* Ementas */}
       <div className="max-w-6xl mx-auto px-6 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {ementas.map((ementa, idx) => (
-          <div
-            key={ementa.title}
-            ref={(el) => (sectionRefs.current[idx] = el)}
-            className="scroll-mt-40 border border-foreground/10 rounded-lg p-6 bg-popover"
-          >
-            <div className="text-center mb-5">
-              <h2 className="text-xl font-serif tracking-wide mb-1">{ementa.title}</h2>
-              <span className="text-3xl font-serif font-semibold text-primary">{ementa.price}</span>
-              <span className="block text-xs text-muted-foreground mt-1">por pessoa</span>
-            </div>
-
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-1">Entradas</h3>
-                <p className="text-sm text-muted-foreground">{ementa.entradas}</p>
+          {ementas.map((ementa, idx) => (
+            <div
+              key={ementa.title}
+              ref={(el) => (sectionRefs.current[idx] = el)}
+              className="scroll-mt-40 border border-foreground/10 rounded-lg p-6 bg-popover"
+            >
+              <div className="text-center mb-5">
+                <h2 className="text-xl font-serif tracking-wide mb-1">{ementa.title}</h2>
+                <span className="text-3xl font-serif font-semibold text-primary">{ementa.price}</span>
+                <span className="block text-xs text-muted-foreground mt-1">por pessoa</span>
               </div>
 
-              {ementa.pratos.map((prato) => (
-                <div key={prato.label}>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-1">{prato.label}</h3>
-                  <p className="text-sm text-foreground font-medium">{prato.desc}</p>
-                  {prato.extra && (
-                    <p className="text-xs text-muted-foreground italic mt-0.5">{prato.extra}</p>
-                  )}
-                </div>
-              ))}
-
-              {ementa.bebidas && (
+              <div className="space-y-4">
                 <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-1">Bebidas</h3>
-                  <p className="text-sm text-muted-foreground">{ementa.bebidas}</p>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-1">Entradas</h3>
+                  <p className="text-sm text-muted-foreground">{ementa.entradas}</p>
                 </div>
-              )}
 
-              {ementa.sobremesa && (
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-1">Sobremesa</h3>
-                  <p className="text-sm text-muted-foreground">{ementa.sobremesa}</p>
-                </div>
-              )}
+                {ementa.pratos.map((prato) => (
+                  <div key={prato.label}>
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-1">{prato.label}</h3>
+                    <p className="text-sm text-foreground font-medium">{prato.desc}</p>
+                    {prato.extra && (
+                      <p className="text-xs text-muted-foreground italic mt-0.5">{prato.extra}</p>
+                    )}
+                  </div>
+                ))}
 
-              {ementa.extras && (
-                <div className="pt-3 border-t border-foreground/10">
-                  <p className="text-sm text-foreground font-medium">{ementa.extras}</p>
-                </div>
-              )}
+                {ementa.bebidas && (
+                  <div>
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-1">Bebidas</h3>
+                    <p className="text-sm text-muted-foreground">{ementa.bebidas}</p>
+                  </div>
+                )}
 
-              {ementa.sameAs && (
-                <div className="pt-3 border-t border-foreground/10">
-                  <p className="text-xs text-muted-foreground italic">{ementa.sameAs}</p>
-                </div>
-              )}
+                {ementa.sobremesa && (
+                  <div>
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-1">Sobremesa</h3>
+                    <p className="text-sm text-muted-foreground">{ementa.sobremesa}</p>
+                  </div>
+                )}
+
+                {ementa.extras && (
+                  <div className="pt-3 border-t border-foreground/10">
+                    <p className="text-sm text-foreground font-medium">{ementa.extras}</p>
+                  </div>
+                )}
+
+                {ementa.sameAs && (
+                  <div className="pt-3 border-t border-foreground/10">
+                    <p className="text-xs text-muted-foreground italic">{ementa.sameAs}</p>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Food image */}
