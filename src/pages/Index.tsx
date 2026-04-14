@@ -24,6 +24,7 @@ const TripadvisorIcon = ({ size = 16, className = "" }: { size?: number; classNa
 );
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
+import logoTransparent from "@/assets/logo-cacarola-transparent.png";
 import logoWhite from "@/assets/logo-cacarola-white.png";
 import carouselNew1 from "@/assets/carousel-new-1.jpg";
 import carouselNew2 from "@/assets/carousel-new-2.jpg";
