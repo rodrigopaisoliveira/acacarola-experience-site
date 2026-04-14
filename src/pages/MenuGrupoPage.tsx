@@ -58,6 +58,23 @@ const MenuGrupoPage = () => {
     if (header) setHeaderHeight(header.offsetHeight);
   }, []);
 
+  // Track active section on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const idx = sectionRefs.current.indexOf(entry.target as HTMLDivElement);
+            if (idx !== -1) setActiveMenu(idx);
+          }
+        }
+      },
+      { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
+    );
+    sectionRefs.current.forEach((ref) => ref && observer.observe(ref));
+    return () => observer.disconnect();
+  }, []);
+
   const handleTabClick = (idx: number) => {
     setActiveMenu(idx);
     sectionRefs.current[idx]?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -75,24 +92,14 @@ const MenuGrupoPage = () => {
         </p>
       </div>
 
-      {/* Hero image */}
-      <div className="max-w-5xl mx-auto px-6 pt-8">
-        <div className="rounded-xl overflow-hidden shadow-lg">
-          <img
-            src={grupoMesa}
-            alt="Mesa de grupo com pratos tradicionais"
-            width={1280}
-            height={512}
-            className="w-full h-48 md:h-72 object-cover"
-          />
-        </div>
-      </div>
-
       {/* Sticky menu bar */}
       <nav
-        className="sticky z-30 bg-foreground shadow-sm mt-8"
+        className="sticky z-30 bg-foreground shadow-sm"
         style={{ top: `${headerHeight}px` }}
       >
+
+      {/* Hero image */}
+      <div className="max-w-5xl mx-auto px-6 pt-8">
         <div className="max-w-5xl mx-auto flex">
           {ementas.map((ementa, idx) => (
             <button
