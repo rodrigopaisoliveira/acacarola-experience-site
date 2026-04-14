@@ -32,6 +32,7 @@ import carouselNew4 from "@/assets/carousel-new-4.jpg";
 import carouselNew5 from "@/assets/carousel-new-5.jpg";
 import carouselNew6 from "@/assets/carousel-new-6.jpg";
 import carouselNew7 from "@/assets/carousel-new-7.jpg";
+import carouselNew8 from "@/assets/carousel-new-8.jpg";
 import carouselNew9 from "@/assets/carousel-new-9.jpg";
 import interior1 from "@/assets/interior-1.jpg";
 import exterior1 from "@/assets/exterior-1.jpg";
