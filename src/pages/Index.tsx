@@ -25,32 +25,28 @@ const TripadvisorIcon = ({ size = 16, className = "" }: { size?: number; classNa
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 import logoWhite from "@/assets/logo-cacarola-white.png";
-import gallerySalad from "@/assets/gallery-salad.jpg";
-import galleryPotatoes from "@/assets/gallery-potatoes.jpg";
-import galleryFish from "@/assets/gallery-fish.jpg";
-import carousel1 from "@/assets/carousel-1.jpg";
-import carousel2 from "@/assets/carousel-2.jpg";
-import carousel3 from "@/assets/carousel-3.jpg";
-import carousel4 from "@/assets/carousel-4.jpg";
-import carousel5 from "@/assets/carousel-5.jpg";
-import carousel6 from "@/assets/carousel-6.jpg";
+import carouselNew1 from "@/assets/carousel-new-1.jpg";
+import carouselNew2 from "@/assets/carousel-new-2.jpg";
+import carouselNew3 from "@/assets/carousel-new-3.jpg";
+import carouselNew4 from "@/assets/carousel-new-4.jpg";
+import carouselNew5 from "@/assets/carousel-new-5.jpg";
+import carouselNew6 from "@/assets/carousel-new-6.jpg";
+import carouselNew7 from "@/assets/carousel-new-7.jpg";
+import carouselNew8 from "@/assets/carousel-new-8.jpg";
+import carouselNew9 from "@/assets/carousel-new-9.jpg";
 import interior1 from "@/assets/interior-1.jpg";
 import exterior1 from "@/assets/exterior-1.jpg";
-import foodDetail1 from "@/assets/food-detail-1.jpg";
-import foodDetail2 from "@/assets/food-detail-2.jpg";
 
 const carouselImages = [
-  { src: gallerySalad, alt: "Salada fresca" },
-  { src: carousel1, alt: "Cozido à portuguesa" },
-  { src: foodDetail1, alt: "Peixe grelhado com limão" },
-  { src: carousel2, alt: "Picanha grelhada" },
-  { src: galleryPotatoes, alt: "Batatas assadas" },
-  { src: foodDetail2, alt: "Arroz de marisco" },
-  { src: carousel3, alt: "Polvo à lagareiro" },
-  { src: carousel4, alt: "Arroz de marisco" },
-  { src: galleryFish, alt: "Peixe grelhado" },
-  { src: carousel5, alt: "Leite creme" },
-  { src: carousel6, alt: "Mousse de chocolate" },
+  { src: carouselNew1, alt: "Peixe grelhado com batatas e legumes" },
+  { src: carouselNew2, alt: "Carne estufada com puré e grelos" },
+  { src: carouselNew3, alt: "Ervilhas com ovos escalfados" },
+  { src: carouselNew4, alt: "Carne com batatas e grelos" },
+  { src: carouselNew5, alt: "Carne estufada com puré" },
+  { src: carouselNew6, alt: "Bacalhau gratinado com puré" },
+  { src: carouselNew7, alt: "Peixe cozido com legumes" },
+  { src: carouselNew8, alt: "Costeleta grelhada com ovo" },
+  { src: carouselNew9, alt: "Carne assada com batatas fritas" },
 ];
 
 const reviews = [

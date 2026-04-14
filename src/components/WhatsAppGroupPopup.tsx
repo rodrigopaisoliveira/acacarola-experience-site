@@ -50,7 +50,7 @@ const WhatsAppGroupPopup = () => {
         </p>
 
         <a
-          href="https://chat.whatsapp.com/GRUPO_ID"
+          href="https://chat.whatsapp.com/FvTxCmxJwERKpn51gAovDU?mode=gi_t"
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full text-center rounded-full py-2.5 text-sm font-sans tracking-widest uppercase transition-colors"
