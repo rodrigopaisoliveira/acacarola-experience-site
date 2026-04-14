@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from "react";
 import grupoMesa from "@/assets/grupo-mesa.jpg";
 import grupoBacalhau from "@/assets/grupo-bacalhau.jpg";
 
@@ -48,32 +49,74 @@ const normas = [
 ];
 
 const MenuGrupoPage = () => {
-  return (
-    <div className="py-12 px-6 max-w-5xl mx-auto">
-      <h1 className="text-4xl md:text-5xl font-serif text-center tracking-wide mb-2">
-        Menus de Grupo
-      </h1>
-      <p className="text-center text-muted-foreground font-sans mb-12">
-        Mínimo 15 pessoas · Reserva com 48h de antecedência
-      </p>
+  const [activeMenu, setActiveMenu] = useState(0);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [headerHeight, setHeaderHeight] = useState(0);
 
-      {/* Hero image */}
-      <div className="rounded-xl overflow-hidden shadow-lg mb-12">
-        <img
-          src={grupoMesa}
-          alt="Mesa de grupo com pratos tradicionais"
-          width={1280}
-          height={512}
-          className="w-full h-48 md:h-72 object-cover"
-        />
+  useEffect(() => {
+    const header = document.querySelector(".sticky.top-0.z-40") as HTMLElement;
+    if (header) setHeaderHeight(header.offsetHeight);
+  }, []);
+
+  const handleTabClick = (idx: number) => {
+    setActiveMenu(idx);
+    sectionRefs.current[idx]?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  return (
+    <div className="min-h-screen bg-popover">
+      {/* Header */}
+      <div className="bg-background py-8 md:py-12 px-6 text-center">
+        <h1 className="text-4xl md:text-5xl font-serif tracking-wide mb-2">
+          Menus de Grupo
+        </h1>
+        <p className="text-muted-foreground font-sans">
+          Mínimo 15 pessoas · Reserva com 48h de antecedência
+        </p>
       </div>
 
-      {/* Ementas grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        {ementas.map((ementa) => (
+      {/* Hero image */}
+      <div className="max-w-5xl mx-auto px-6 pt-8">
+        <div className="rounded-xl overflow-hidden shadow-lg">
+          <img
+            src={grupoMesa}
+            alt="Mesa de grupo com pratos tradicionais"
+            width={1280}
+            height={512}
+            className="w-full h-48 md:h-72 object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Sticky menu bar */}
+      <nav
+        className="sticky z-30 bg-foreground shadow-sm mt-8"
+        style={{ top: `${headerHeight}px` }}
+      >
+        <div className="max-w-5xl mx-auto flex">
+          {ementas.map((ementa, idx) => (
+            <button
+              key={ementa.title}
+              onClick={() => handleTabClick(idx)}
+              className={`flex-1 py-3 text-sm md:text-base font-sans tracking-wider uppercase transition-all ${
+                idx === activeMenu
+                  ? "text-popover font-semibold border-b-2 border-primary"
+                  : "text-popover/70 hover:text-popover"
+              }`}
+            >
+              {ementa.title}
+            </button>
+          ))}
+        </div>
+      </nav>
+
+      {/* Ementas */}
+      <div className="max-w-5xl mx-auto px-6 py-10 space-y-10">
+        {ementas.map((ementa, idx) => (
           <div
             key={ementa.title}
-            className="border border-border rounded-lg p-6 flex flex-col bg-card"
+            ref={(el) => (sectionRefs.current[idx] = el)}
+            className="scroll-mt-40 border border-foreground/10 rounded-lg p-6 bg-popover"
           >
             <div className="text-center mb-5">
               <h2 className="text-xl font-serif tracking-wide mb-1">{ementa.title}</h2>
@@ -81,7 +124,7 @@ const MenuGrupoPage = () => {
               <span className="block text-xs text-muted-foreground mt-1">por pessoa</span>
             </div>
 
-            <div className="space-y-4 flex-1">
+            <div className="space-y-4">
               <div>
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-1">Entradas</h3>
                 <p className="text-sm text-muted-foreground">{ementa.entradas}</p>
@@ -112,13 +155,13 @@ const MenuGrupoPage = () => {
               )}
 
               {ementa.extras && (
-                <div className="pt-3 border-t border-border">
+                <div className="pt-3 border-t border-foreground/10">
                   <p className="text-sm text-foreground font-medium">{ementa.extras}</p>
                 </div>
               )}
 
               {ementa.sameAs && (
-                <div className="pt-3 border-t border-border">
+                <div className="pt-3 border-t border-foreground/10">
                   <p className="text-xs text-muted-foreground italic">{ementa.sameAs}</p>
                 </div>
               )}
@@ -128,30 +171,34 @@ const MenuGrupoPage = () => {
       </div>
 
       {/* Food image */}
-      <div className="rounded-xl overflow-hidden shadow-lg mb-12">
-        <img
-          src={grupoBacalhau}
-          alt="Bacalhau gratinado com natas"
-          loading="lazy"
-          width={1280}
-          height={512}
-          className="w-full h-48 md:h-64 object-cover"
-        />
+      <div className="max-w-5xl mx-auto px-6 pb-10">
+        <div className="rounded-xl overflow-hidden shadow-lg">
+          <img
+            src={grupoBacalhau}
+            alt="Bacalhau gratinado com natas"
+            loading="lazy"
+            width={1280}
+            height={512}
+            className="w-full h-48 md:h-64 object-cover"
+          />
+        </div>
       </div>
 
       {/* Normas */}
-      <div className="border border-border rounded-lg p-6 md:p-8 bg-card">
-        <h2 className="text-xl md:text-2xl font-serif text-center tracking-wide mb-6">
-          Normas para os Menus de Grupo
-        </h2>
-        <ul className="space-y-3 max-w-3xl mx-auto">
-          {normas.map((norma, idx) => (
-            <li key={idx} className="flex gap-3 text-sm text-muted-foreground">
-              <span className="text-primary font-bold mt-0.5">•</span>
-              <span>{norma}</span>
-            </li>
-          ))}
-        </ul>
+      <div className="max-w-5xl mx-auto px-6 pb-12">
+        <div className="border border-foreground/10 rounded-lg p-6 md:p-8 bg-popover">
+          <h2 className="text-xl md:text-2xl font-serif text-center tracking-wide mb-6">
+            Normas para os Menus de Grupo
+          </h2>
+          <ul className="space-y-3 max-w-3xl mx-auto">
+            {normas.map((norma, idx) => (
+              <li key={idx} className="flex gap-3 text-sm text-muted-foreground">
+                <span className="text-primary font-bold mt-0.5">•</span>
+                <span>{norma}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
