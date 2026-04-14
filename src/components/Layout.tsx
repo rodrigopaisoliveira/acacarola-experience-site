@@ -113,7 +113,7 @@ const Layout = ({ children }: LayoutProps) => {
       <main className="flex-1">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-popover border-t border-border/50">
+      <footer className="bg-background border-t border-border/50">
         <div className="max-w-6xl mx-auto px-6 py-14 md:py-18">
           {/* Top - Brand */}
           <div className="text-center mb-10">
