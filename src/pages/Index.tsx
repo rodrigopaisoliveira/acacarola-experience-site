@@ -214,8 +214,8 @@ const Index = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" className="rounded-full px-8 py-5 tracking-wide font-sans gap-2">
-                <Star size={16} /> Ver Críticas <ExternalLink size={14} />
+              <Button className="rounded-full px-8 py-5 tracking-wide font-sans gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+                <Star size={16} className="text-secondary" /> Ver Críticas <ExternalLink size={14} />
               </Button>
             </a>
           </div>
@@ -234,7 +234,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 px-6 bg-primary/5" id="contacto">
+      <section className="py-20 md:py-28 px-6 bg-popover" id="contacto">
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-sm font-sans tracking-[0.3em] uppercase text-primary mb-4">Venha conhecer-nos</p>
           <h2 className="text-3xl md:text-5xl font-serif mb-4 tracking-wide">
