@@ -9,8 +9,8 @@ const ReservarMesaPage = () => {
   return (
     <div className="min-h-screen bg-popover">
       {/* Hero header */}
-      <section className="bg-background py-10 md:py-16 text-center border-b border-border/50">
-        <h1 className="text-2xl md:text-4xl font-serif tracking-[0.15em] uppercase text-foreground">
+      <section className="bg-background py-5 md:py-10 text-center border-b border-border/50">
+        <h1 className="text-xl md:text-3xl font-serif tracking-[0.1em] uppercase text-foreground">
           Reservas & Encomendas
         </h1>
       </section>
