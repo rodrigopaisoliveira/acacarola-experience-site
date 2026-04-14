@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, MapPin, Clock } from "lucide-react";
 import logoBlack from "@/assets/logo-cacarola-black.png";
-import logoWhite from "@/assets/logo-cacarola-white.png";
 import WhatsAppButton from "./WhatsAppButton";
 import WhatsAppGroupPopup from "./WhatsAppGroupPopup";
 
@@ -53,9 +52,8 @@ const Layout = ({ children }: LayoutProps) => {
           >
             <Menu size={28} />
           </button>
-          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2 sm:gap-3">
-            <img src={logoBlack} alt="A Caçarola" className="h-12 sm:h-16 md:h-20" />
-            <span className="font-serif text-lg sm:text-2xl md:text-3xl tracking-[0.05em] text-foreground uppercase">A Caçarola</span>
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="font-serif text-xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.05em] sm:tracking-[0.08em] text-foreground uppercase font-normal whitespace-nowrap">
+            A Caçarola
           </Link>
           <a
             href="tel:+351214780048"
@@ -76,7 +74,7 @@ const Layout = ({ children }: LayoutProps) => {
           />
           <aside className="relative w-80 max-w-[85vw] bg-foreground text-background h-full animate-slide-in flex flex-col shadow-2xl">
             <div className="flex items-center justify-between p-8 pb-4">
-              <img src={logoWhite} alt="A Caçarola" className="h-8" />
+              <span className="font-serif text-lg tracking-[0.05em] text-background">A Caçarola</span>
               <button onClick={() => setSidebarOpen(false)} aria-label="Fechar menu" className="w-8 h-8 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors text-background">
                 <X size={18} />
               </button>
