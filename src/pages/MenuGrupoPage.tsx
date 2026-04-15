@@ -1,8 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import grupoMesa from "@/assets/grupo-mesa.jpg";
-import grupoPaoAzeitonas from "@/assets/menu-pao-azeitonas.jpg";
-import grupoSangrias from "@/assets/grupo-sangrias.jpg";
-import grupoPratos from "@/assets/grupo-pratos.jpg";
+import grupoSangria from "@/assets/grupo-sangria.jpg";
 
 const ementas = [
   {
@@ -201,18 +199,10 @@ const MenuGrupoPage = () => {
         </div>
       </div>
 
-      {/* Food images gallery */}
+      {/* Sangria image */}
       <div className="max-w-5xl mx-auto px-6 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="rounded-xl overflow-hidden shadow-lg">
-            <img src={grupoPaoAzeitonas} alt="Pão caseiro e azeitonas" loading="lazy" width={1280} height={512} className="w-full h-48 md:h-56 object-cover" />
-          </div>
-          <div className="rounded-xl overflow-hidden shadow-lg">
-            <img src={grupoSangrias} alt="Sangrias de fruta" loading="lazy" width={1280} height={512} className="w-full h-48 md:h-56 object-cover" />
-          </div>
-          <div className="rounded-xl overflow-hidden shadow-lg">
-            <img src={grupoPratos} alt="Pratos do restaurante" loading="lazy" width={1280} height={512} className="w-full h-48 md:h-56 object-cover" />
-          </div>
+        <div className="rounded-xl overflow-hidden shadow-lg">
+          <img src={grupoSangria} alt="Sangria de fruta" loading="lazy" width={1280} height={512} className="w-full h-48 md:h-64 object-cover" />
         </div>
       </div>
 
