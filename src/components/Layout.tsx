@@ -98,7 +98,7 @@ const Layout = ({ children }: LayoutProps) => {
             <div className="p-8 pt-4 border-t border-background/20 space-y-4">
               <div className="flex items-start gap-3 text-sm text-background/60">
                 <MapPin size={15} className="mt-0.5 shrink-0 text-background/80" />
-                <a href="https://maps.google.com/?q=Av.+dos+Bombeiros+Voluntários+18,+Pontinha" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">Av. dos Bombeiros Voluntários 18, Pontinha</a>
+                <a href="https://www.google.com/maps/place/A+Ca%C3%A7arola/@38.7628317,-9.2012088,19z/" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">Av. dos Bombeiros Voluntários 18, Pontinha</a>
               </div>
               <div className="flex items-center gap-3 text-sm text-background/60">
                 <Phone size={15} className="shrink-0 text-background/80" />
@@ -127,7 +127,7 @@ const Layout = ({ children }: LayoutProps) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mb-10 text-center">
             <div className="space-y-2">
               <MapPin size={18} className="mx-auto text-primary" />
-              <a href="https://maps.google.com/?q=Av.+dos+Bombeiros+Voluntários+18,+1675-107+Pontinha" target="_blank" rel="noopener noreferrer" className="font-sans text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.google.com/maps/place/A+Ca%C3%A7arola/@38.7628317,-9.2012088,19z/" target="_blank" rel="noopener noreferrer" className="font-sans text-sm text-muted-foreground hover:text-primary transition-colors">
                 Av. dos Bombeiros Voluntários 18<br />1675-107 Pontinha
               </a>
             </div>
