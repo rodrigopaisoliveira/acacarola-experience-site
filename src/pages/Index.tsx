@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Users, Star, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -84,6 +84,8 @@ const Index = () => {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
   const slidesPerView = isMobile ? 1 : 3;
   const maxSlide = carouselImages.length - slidesPerView;
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
@@ -92,6 +94,22 @@ const Index = () => {
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
   }, [maxSlide]);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) nextSlide();
+      else prevSlide();
+    }
+  }, [nextSlide, prevSlide]);
 
   return (
     <div>
@@ -123,11 +141,14 @@ const Index = () => {
         </p>
       </section>
 
-      {/* Photo Carousel - Full width like Caçarola */}
+      {/* Photo Carousel - Full width */}
       <section className="relative w-full overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * (100 / slidesPerView)}%)` }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           {carouselImages.map((img, i) => (
             <div key={i} className="min-w-full md:min-w-[33.333%] h-[60vh] md:h-[70vh]">
@@ -142,21 +163,32 @@ const Index = () => {
             </div>
           ))}
         </div>
-        {/* Navigation arrows */}
+        {/* Desktop arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-foreground/80 text-background flex items-center justify-center hover:bg-foreground transition-colors z-10"
+          className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-foreground/80 text-background items-center justify-center hover:bg-foreground transition-colors z-10"
           aria-label="Foto anterior"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-foreground/80 text-background flex items-center justify-center hover:bg-foreground transition-colors z-10"
+          className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-foreground/80 text-background items-center justify-center hover:bg-foreground transition-colors z-10"
           aria-label="Próxima foto"
         >
           <ChevronRight size={24} />
         </button>
+        {/* Mobile dots + swipe hint */}
+        <div className="md:hidden absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
+          {carouselImages.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentSlide(i)}
+              className={`rounded-full transition-all ${i === currentSlide ? "w-5 h-2 bg-primary" : "w-2 h-2 bg-background/50"}`}
+              aria-label={`Foto ${i + 1}`}
+            />
+          ))}
+        </div>
       </section>
 
       {/* Reviews Section */}
