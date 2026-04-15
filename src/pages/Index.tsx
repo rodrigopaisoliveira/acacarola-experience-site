@@ -84,6 +84,8 @@ const Index = () => {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
   const slidesPerView = isMobile ? 1 : 3;
   const maxSlide = carouselImages.length - slidesPerView;
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
@@ -92,6 +94,22 @@ const Index = () => {
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
   }, [maxSlide]);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) nextSlide();
+      else prevSlide();
+    }
+  }, [nextSlide, prevSlide]);
 
   return (
     <div>
