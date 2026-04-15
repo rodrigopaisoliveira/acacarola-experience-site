@@ -224,7 +224,7 @@ const Index = () => {
       {/* Interior & Exterior Photos */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a href="https://www.google.com/maps/place/Novo+Edmundo/@38.7633,-9.2138,17z/" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden h-64 md:h-80 group cursor-pointer block">
+          <a href="https://www.google.com/maps?q=38.762821790943285,-9.201033755436622" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden h-64 md:h-80 group cursor-pointer block">
             <img src={interior1} alt="Interior acolhedor do A Caçarola" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={1280} height={854} />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -232,7 +232,7 @@ const Index = () => {
               <p className="text-primary-foreground/70 font-sans text-xs tracking-wider uppercase mt-1">135 Lugares · 3 Salas</p>
             </div>
           </a>
-          <a href="https://www.google.com/maps/place/Novo+Edmundo/@38.7633,-9.2138,17z/" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden h-64 md:h-80 group cursor-pointer block">
+          <a href="https://www.google.com/maps?q=38.762821790943285,-9.201033755436622" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden h-64 md:h-80 group cursor-pointer block">
             <img src={exterior1} alt="Fachada do A Caçarola ao entardecer" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={1280} height={854} />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -255,7 +255,7 @@ const Index = () => {
 
           <div className="w-full h-72 md:h-96 rounded-2xl overflow-hidden bg-muted mb-10 shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.2!2d-9.2138!3d38.7633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecce4687c4c0d%3A0xd74e8fdc7c08398c!2sNovo%20Edmundo!5e0!3m2!1spt-PT!2spt!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1500!2d-9.201033755436622!3d38.762821790943285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!1s0x0%3A0x0!5e0!3m2!1spt-PT!2spt!4v1"
               width="100%"
               height="100%"
               style={{ border: 0 }}
