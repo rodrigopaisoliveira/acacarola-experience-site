@@ -17,10 +17,10 @@ const sectionImages: Record<number, { src: string; alt: string }[]> = {
   ],
   2: [
     { src: menuPernilAssado, alt: "Pernil de porco assado com batatas" },
-    { src: menuCarneLaranja, alt: "Carne assada com laranja e batatas" },
   ],
   3: [
     { src: menuEspecialidades, alt: "Especialidades da casa" },
+    { src: menuCarneLaranja, alt: "Carne assada com laranja e batatas" },
   ],
   4: [
     { src: menuPeixeCozido, alt: "Peixe cozido com legumes e ovo" },
@@ -52,7 +52,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
   if (images.length === 1) {
     return (
       <div className="mt-10 rounded-xl overflow-hidden shadow-lg menu-item-animate opacity-0 translate-y-4 transition-all duration-700">
-        <img src={images[0].src} alt={images[0].alt} loading="lazy" width={1280} height={512} className="w-full h-48 md:h-64 object-cover" />
+        <img src={images[0].src} alt={images[0].alt} loading="lazy" width={1280} height={720} className="w-full h-72 md:h-96 object-contain bg-muted/30" />
       </div>
     );
   }
@@ -67,7 +67,7 @@ const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) =
       >
         <div className="flex transition-transform duration-500 ease-out" style={{ transform: `translateX(-${current * 100}%)` }}>
           {images.map((img, i) => (
-            <img key={i} src={img.src} alt={img.alt} loading="lazy" width={1280} height={512} className="w-full h-48 md:h-64 object-cover shrink-0" />
+            <img key={i} src={img.src} alt={img.alt} loading="lazy" width={1280} height={720} className="w-full h-72 md:h-96 object-contain bg-muted/30 shrink-0" />
           ))}
         </div>
         {/* Dots indicator */}
