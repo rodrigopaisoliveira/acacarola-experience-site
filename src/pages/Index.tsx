@@ -255,7 +255,7 @@ const Index = () => {
 
           <div className="w-full h-72 md:h-96 rounded-2xl overflow-hidden bg-muted mb-10 shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.2!2d-9.2138!3d38.7633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecce4687c4c0d%3A0xd74e8fdc7c08398c!2sNovo%20Edmundo!5e0!3m2!1spt-PT!2spt!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1500!2d-9.201033755436622!3d38.762821790943285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!1s0x0%3A0x0!5e0!3m2!1spt-PT!2spt!4v1"
               width="100%"
               height="100%"
               style={{ border: 0 }}
