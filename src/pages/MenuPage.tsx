@@ -1,30 +1,20 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { menuCategories } from "@/data/menuData";
 import menuPaoAzeitonas from "@/assets/menu-pao-azeitonas.jpg";
-import menuEspecialidades from "@/assets/menu-especialidades.jpg";
-import menuSobremesas from "@/assets/menu-sobremesas.jpg";
-import menuPeixinhos from "@/assets/menu-peixinhos.jpg";
-import menuCarneLaranja from "@/assets/menu-carne-laranja.jpg";
 import menuPernilAssado from "@/assets/menu-pernil-assado.jpg";
 import menuPeixeCozido from "@/assets/menu-peixe-cozido.jpg";
 
-// Images to show after specific sections (by index) - now arrays for carousels
+// Images to show after specific sections (by index)
 // Order: 0-Entradas, 1-Sugestão Vinho, 2-Pratos do Dia, 3-Especialidades, 4-Peixes, 5-Carnes, 6-Acompanhamentos
 const sectionImages: Record<number, { src: string; alt: string }[]> = {
   0: [
     { src: menuPaoAzeitonas, alt: "Pão caseiro e azeitonas" },
-    { src: menuPeixinhos, alt: "Peixinhos fritos com salada" },
   ],
   2: [
     { src: menuPernilAssado, alt: "Pernil de porco assado com batatas" },
-    { src: menuCarneLaranja, alt: "Carne assada com laranja e batatas" },
-  ],
-  3: [
-    { src: menuEspecialidades, alt: "Especialidades da casa" },
   ],
   4: [
     { src: menuPeixeCozido, alt: "Peixe cozido com legumes e ovo" },
-    { src: menuSobremesas, alt: "Sobremesas caseiras" },
   ],
 };
 
