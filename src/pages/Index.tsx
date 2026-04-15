@@ -224,11 +224,21 @@ const Index = () => {
       {/* Interior & Exterior Photos */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="rounded-2xl overflow-hidden h-64 md:h-80">
-            <img src={interior1} alt="Interior acolhedor do A Caçarola" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" width={1280} height={854} />
+          <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 group">
+            <img src={interior1} alt="Interior acolhedor do A Caçarola" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={1280} height={854} />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-5">
+              <p className="text-primary-foreground font-serif text-lg tracking-wide">O Nosso Espaço</p>
+              <p className="text-primary-foreground/70 font-sans text-xs tracking-wider uppercase mt-1">135 Lugares · 3 Salas</p>
+            </div>
           </div>
-          <div className="rounded-2xl overflow-hidden h-64 md:h-80">
-            <img src={exterior1} alt="Fachada do A Caçarola ao entardecer" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" width={1280} height={854} />
+          <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 group">
+            <img src={exterior1} alt="Fachada do A Caçarola ao entardecer" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={1280} height={854} />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-5">
+              <p className="text-primary-foreground font-serif text-lg tracking-wide">Venha Visitar-nos</p>
+              <p className="text-primary-foreground/70 font-sans text-xs tracking-wider uppercase mt-1">Pontinha, Lisboa · Desde 1964</p>
+            </div>
           </div>
         </div>
       </section>
