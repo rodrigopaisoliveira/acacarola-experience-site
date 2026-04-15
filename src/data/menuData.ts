@@ -35,16 +35,6 @@ export const menuCategories: MenuCategory[] = [
     ],
   },
   {
-    title: "Especialidades",
-    items: [
-      { name: "Polvo Grelhado à Lagareiro", price: "21,90 €" },
-      { name: "Secretos de Porco Preto Grelhados", price: "15,50 €" },
-      { name: "Açorda de Gambas", price: "13,90 €" },
-      { name: "Pianinho Grelhado", price: "11,50 €" },
-      { name: "Picanha Black Angus Grelhada na Brasa", price: "19,90 €" },
-    ],
-  },
-  {
     title: "Pratos do Dia",
     items: [
       { name: "Bacalhau Assado à Lagareiro", price: "16,50 €" },
@@ -53,6 +43,16 @@ export const menuCategories: MenuCategory[] = [
       { name: "Massinha de Peixe com Gambas", price: "12,90 €" },
       { name: "Espetada do Lombo Grelhada", price: "14,90 €" },
       { name: "Robalo Grelhado à Lagareiro", price: "14,50 €" },
+    ],
+  },
+  {
+    title: "Especialidades",
+    items: [
+      { name: "Polvo Grelhado à Lagareiro", price: "21,90 €" },
+      { name: "Secretos de Porco Preto Grelhados", price: "15,50 €" },
+      { name: "Açorda de Gambas", price: "13,90 €" },
+      { name: "Pianinho Grelhado", price: "11,50 €" },
+      { name: "Picanha Black Angus Grelhada na Brasa", price: "19,90 €" },
     ],
   },
   {
