@@ -205,13 +205,13 @@ const MenuGrupoPage = () => {
       <div className="max-w-5xl mx-auto px-6 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="rounded-xl overflow-hidden shadow-lg">
-            <img src={grupoBacalhau} alt="Bacalhau gratinado com natas" loading="lazy" width={1280} height={512} className="w-full h-48 md:h-56 object-cover" />
+            <img src={grupoPaoAzeitonas} alt="Pão caseiro e azeitonas" loading="lazy" width={1280} height={512} className="w-full h-48 md:h-56 object-cover" />
           </div>
           <div className="rounded-xl overflow-hidden shadow-lg">
-            <img src={menuCarilGambas} alt="Caril de gambas com arroz" loading="lazy" width={1280} height={512} className="w-full h-48 md:h-56 object-cover" />
+            <img src={grupoSangrias} alt="Sangrias de fruta" loading="lazy" width={1280} height={512} className="w-full h-48 md:h-56 object-cover" />
           </div>
           <div className="rounded-xl overflow-hidden shadow-lg">
-            <img src={menuCarneLaranja} alt="Carne assada com laranja" loading="lazy" width={1280} height={512} className="w-full h-48 md:h-56 object-cover" />
+            <img src={grupoPratos} alt="Pratos do restaurante" loading="lazy" width={1280} height={512} className="w-full h-48 md:h-56 object-cover" />
           </div>
         </div>
       </div>
