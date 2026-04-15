@@ -1,14 +1,84 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { menuCategories } from "@/data/menuData";
 import menuEntradas from "@/assets/menu-entradas.jpg";
 import menuEspecialidades from "@/assets/menu-especialidades.jpg";
 import menuSobremesas from "@/assets/menu-sobremesas.jpg";
+import menuCarilGambas from "@/assets/menu-caril-gambas.jpg";
+import menuPeixinhos from "@/assets/menu-peixinhos.jpg";
+import menuCarneLaranja from "@/assets/menu-carne-laranja.jpg";
 
-// Images to show after specific sections (by index)
-const sectionImages: Record<number, { src: string; alt: string }> = {
-  0: { src: menuEntradas, alt: "Tábua de entradas tradicionais" },
-  2: { src: menuEspecialidades, alt: "Especialidades da casa" },
-  4: { src: menuSobremesas, alt: "Sobremesas caseiras" },
+// Images to show after specific sections (by index) - now arrays for carousels
+const sectionImages: Record<number, { src: string; alt: string }[]> = {
+  0: [
+    { src: menuEntradas, alt: "Tábua de entradas tradicionais" },
+    { src: menuPeixinhos, alt: "Peixinhos fritos com salada" },
+  ],
+  2: [
+    { src: menuEspecialidades, alt: "Especialidades da casa" },
+    { src: menuCarilGambas, alt: "Caril de gambas com arroz e legumes" },
+    { src: menuCarneLaranja, alt: "Carne assada com laranja e batatas" },
+  ],
+  4: [
+    { src: menuSobremesas, alt: "Sobremesas caseiras" },
+  ],
+};
+
+const ImageCarousel = ({ images }: { images: { src: string; alt: string }[] }) => {
+  const [current, setCurrent] = useState(0);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0 && current < images.length - 1) setCurrent(c => c + 1);
+      if (diff < 0 && current > 0) setCurrent(c => c - 1);
+    }
+  }, [current, images.length]);
+
+  if (images.length === 1) {
+    return (
+      <div className="mt-10 rounded-xl overflow-hidden shadow-lg menu-item-animate opacity-0 translate-y-4 transition-all duration-700">
+        <img src={images[0].src} alt={images[0].alt} loading="lazy" width={1280} height={512} className="w-full h-48 md:h-64 object-cover" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="mt-10 menu-item-animate opacity-0 translate-y-4 transition-all duration-700">
+      <div
+        className="relative rounded-xl overflow-hidden shadow-lg"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div className="flex transition-transform duration-500 ease-out" style={{ transform: `translateX(-${current * 100}%)` }}>
+          {images.map((img, i) => (
+            <img key={i} src={img.src} alt={img.alt} loading="lazy" width={1280} height={512} className="w-full h-48 md:h-64 object-cover shrink-0" />
+          ))}
+        </div>
+        {/* Dots indicator */}
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-2 h-2 rounded-full transition-all ${i === current ? "bg-primary w-6" : "bg-primary-foreground/60"}`}
+              aria-label={`Imagem ${i + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 const MenuPage = () => {
@@ -159,16 +229,7 @@ const MenuPage = () => {
 
             {/* Image after select sections */}
             {sectionImages[catIdx] && (
-              <div className="mt-10 rounded-xl overflow-hidden shadow-lg menu-item-animate opacity-0 translate-y-4 transition-all duration-700">
-                <img
-                  src={sectionImages[catIdx].src}
-                  alt={sectionImages[catIdx].alt}
-                  loading="lazy"
-                  width={1280}
-                  height={512}
-                  className="w-full h-48 md:h-64 object-cover"
-                />
-              </div>
+              <ImageCarousel images={sectionImages[catIdx]} />
             )}
           </div>
         ))}
