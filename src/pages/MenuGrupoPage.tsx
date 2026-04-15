@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import grupoMesa from "@/assets/grupo-mesa.jpg";
-import grupoBacalhau from "@/assets/grupo-bacalhau.jpg";
-import menuCarilGambas from "@/assets/menu-caril-gambas.jpg";
-import menuCarneLaranja from "@/assets/menu-carne-laranja.jpg";
+import grupoPaoAzeitonas from "@/assets/menu-pao-azeitonas.jpg";
+import grupoSangrias from "@/assets/grupo-sangrias.jpg";
+import grupoPratos from "@/assets/grupo-pratos.jpg";
 
 const ementas = [
   {
