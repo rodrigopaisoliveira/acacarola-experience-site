@@ -261,7 +261,7 @@ const Index = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-5">
               <p className="text-primary-foreground font-serif text-lg tracking-wide">O Nosso Espaço</p>
-              <p className="text-primary-foreground/70 font-sans text-xs tracking-wider uppercase mt-1">135 Lugares · 3 Salas</p>
+              <p className="text-primary-foreground/70 font-sans text-xs tracking-wider uppercase mt-1">76 Lugares · 1 Sala</p>
             </div>
           </a>
           <a href="https://www.google.com/maps/place/A+Ca%C3%A7arola/@38.7628317,-9.2012088,19z/" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden h-64 md:h-80 group cursor-pointer block">

@@ -87,7 +87,7 @@ const ReservarMesaPage = () => {
                   21 478 0048
                 </p>
                 <p className="text-xs text-muted-foreground font-sans tracking-widest uppercase">
-                  Terça a Domingo · 12h–23h
+                  Domingo a Sexta · 12h–15h · 19h–22h
                 </p>
               </div>
             )}

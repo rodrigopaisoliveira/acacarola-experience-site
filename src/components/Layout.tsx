@@ -140,9 +140,8 @@ const Layout = ({ children }: LayoutProps) => {
             <div className="space-y-2">
               <Clock size={18} className="mx-auto text-primary" />
               <div className="font-sans text-sm text-muted-foreground space-y-0.5">
-                <p>Ter–Sáb: 12:00–15:30, 19:00–23:00</p>
-                <p>Dom: 12:00–15:30, 19:00–23:00</p>
-                <p>Seg: Encerrado</p>
+                <p>Dom–Sex: 12:00–15:00, 19:00–22:00</p>
+                <p>Sáb: Encerrado</p>
               </div>
             </div>
           </div>
