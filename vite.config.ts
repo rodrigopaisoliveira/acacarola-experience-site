@@ -5,8 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
   // 👇 base só na build de produção (GitHub Pages)
-  base: "/",
-
+  base: "/acacarola-experience-site/",
   server: {
     host: "::",
     port: 8080,

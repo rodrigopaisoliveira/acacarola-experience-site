@@ -29,16 +29,17 @@ const App = () => (
       <Sonner />
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
-        <Layout> {/* O Layout envolve as Routes diretamente */}
-          <Routes>
+        <Routes>
+          {/* Em vez de envolver o Routes, colocamos o Layout como uma rota pai */}
+          <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
             <Route path="/menu" element={<MenuPage />} />
             <Route path="/menu-grupo" element={<MenuGrupoPage />} />
             <Route path="/reservas" element={<ReservarMesaPage />} />
             <Route path="/encomendas" element={<ReservarMesaPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
