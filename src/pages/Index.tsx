@@ -240,11 +240,11 @@ const Index = () => {
             ))}
           </div>
           <div className="flex justify-center">
-            <a
-              href="https://www.tripadvisor.pt/Restaurant_Review-g3135840-d5959931-Reviews-Restaurante_a_Cacarola-Odivelas_Lisbon_District_Central_Portugal.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+              <a
+                href="https://www.google.com/search?q=A+Caçarola+restaurante+críticas#lrd=0xd1ecd0380f9e31d:0x7000e31e5066c05a,1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
               <Button className="rounded-full px-8 py-5 tracking-wide font-sans gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
                 <Star size={16} className="text-secondary" /> Ver Críticas <ExternalLink size={14} />
               </Button>
