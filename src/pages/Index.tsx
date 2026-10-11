@@ -79,6 +79,8 @@ const reviews = [
   },
 ];
 
+const MAPS_URL = "https://maps.app.goo.gl/eZrGCNc3g9v38tAPA";
+const RG_BADGE = `<link href="https://awards.infcdn.net/2026/circle_v2.css" rel="stylesheet"/><div id="circle-r-ribbon" onclick="if(event.target.nodeName.toLowerCase() != 'a') {window.open(this.querySelector('.r-ribbon_title').href);return 0;}" class=" rg-award-lang-pt_PT" style="cursor: pointer; overflow: hidden; position: relative; display: flex; flex-direction: column; padding: 0; max-width: 174px; min-width: 174px; height: 135px; font: 400 10px/normal 'Akrobat Bold', 'Helvetica Neue', 'Arial', sans-serif; align-items: center; text-align: center; color: #000 !important; text-shadow: none; background: url(https://awards.infcdn.net/img/bg.svg) no-repeat; box-sizing: border-box;"> <div class="r-ribbon_ahead " style="transform: rotate(-11deg); position: absolute; z-index: 4; top: -7px; left: 6px; letter-spacing: 0.2px; padding: 0;"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160px" height="160px" viewBox="0 0 160 160" style="width: 160px; height: 160px; margin-top: 0;"> <defs> <path id="heading-arc" d="M 30 80 a 50 50 0 1 1 100 0"></path> </defs> <text class="r-ribbon_ahead-heading" fill="#000" text-anchor="middle" style="font-size: 16px !important; font-family: 'Akrobat Bold', 'Helvetica Neue', 'Arial', sans-serif !important; line-height: 1; text-transform: uppercase !important; alignment-baseline: auto;"> <textPath startOffset="50%" xlink:href="#heading-arc">Recomendado</textPath> </text> </svg> </div> <p class="r-ribbon_year" style="color: #000; width: 140px; font: 22px/normal 'Akrobat Black', 'Helvetica Neue', 'Arial', sans-serif !important; font-style: italic !important; transform: rotate(-12deg); position: absolute; top: 41px !important; left: 12px !important; letter-spacing: 0.6px; text-align: center !important; padding: 0 !important; margin: 0 !important;">2026</p> <a href="https://pt.restaurantguru.com/Restaurante-a-Cacarola-Lisbon" class="r-ribbon_title" target="_blank" style="text-transform: uppercase; color: #fff !important; width: 140px; font-size: 16px !important; line-height: normal !important; font-family: 'Akrobat Bold', 'Helvetica Neue', 'Arial', sans-serif !important; font-style: italic !important; transform: rotate(-12deg); position: absolute; z-index: 5; top: 72px; left: 12px; letter-spacing: 0.4px !important; text-align: center !important; white-space: normal; padding: 0 !important; margin: 0 !important; text-decoration: none !important; border-bottom: none; box-shadow: none; ">A Caçarola</a> <div class="r-ribbon_ahead r-ribbon_ahead-bottom" style="top: auto; bottom: -14px; left: 26px; letter-spacing: 0.3px; transform: rotate(-13deg); height: 100% !important; max-width: 100%; padding: 0; position: absolute !important; z-index: 4;"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120px" height="120px" viewBox="0 0 120 120" style="width: 120px; height: 120px; margin-top: 0;"> <defs> <path id="subheading-arc" d="M 12 60 a 48 48 0 0 0 96 0"></path> </defs> <text class="r-ribbon_ahead-subh" fill="#000" text-anchor="middle" style="font: 12px/1 'Akrobat Regular', 'Helvetica Neue', 'Arial', sans-serif !important; text-transform: uppercase; letter-spacing: normal;"> <textPath startOffset="50%" xlink:href="#subheading-arc"><a href="https://restaurantguru.com" target="_blank" style="font: 12px/1 'Akrobat Regular', 'Helvetica Neue', 'Arial', sans-serif !important; text-transform: uppercase; letter-spacing: 0.3px; text-decoration: none !important; border-bottom: none; box-shadow: none; padding: 0; margin: 0;">Restaurant Guru</a></textPath> </text> </svg> </div></div>`;
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
@@ -197,7 +199,7 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-serif text-center mb-3 tracking-wide">
             O Que Dizem sobre Nós
           </h2>
-          <div className="flex items-center justify-center gap-8 mb-10">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 mb-10">
             <div className="text-center">
               <div className="flex items-center gap-2">
                 <GoogleIcon size={20} />
@@ -215,6 +217,8 @@ const Index = () => {
               </div>
               <p className="text-xs text-muted-foreground font-sans">Tripadvisor · 21 críticas</p>
             </div>
+            <div className="w-px h-10 bg-border hidden md:block" />
+            <div className="scale-[0.6] origin-center -mx-6 -my-6" dangerouslySetInnerHTML={{ __html: RG_BADGE }} />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             {reviews.map((review, i) => (
@@ -256,7 +260,7 @@ const Index = () => {
       {/* Interior & Exterior Photos */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a href="https://www.google.com/maps/place/A+Ca%C3%A7arola/@38.7628317,-9.2012088,19z/" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden h-64 md:h-80 group cursor-pointer block">
+          <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden h-64 md:h-80 group cursor-pointer block">
             <img src={interior1} alt="Interior acolhedor do A Caçarola" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={1280} height={854} />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -264,7 +268,7 @@ const Index = () => {
               <p className="text-primary-foreground/70 font-sans text-xs tracking-wider uppercase mt-1">76 Lugares · 1 Sala</p>
             </div>
           </a>
-          <a href="https://www.google.com/maps/place/A+Ca%C3%A7arola/@38.7628317,-9.2012088,19z/" target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden h-64 md:h-80 group cursor-pointer block">
+          <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="relative rounded-2xl overflow-hidden h-64 md:h-80 group cursor-pointer block">
             <img src={exterior1} alt="Fachada do A Caçarola ao entardecer" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={1280} height={854} />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/10 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-5">
